@@ -20,6 +20,7 @@
   },
   "include": [
     "src",
-    "serverless.ts"
+    "serverless.ts",
+    "src/types/**/*"
   ]
 }

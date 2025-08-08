@@ -1,8 +1,11 @@
+// serverless.ts de ejemplo con validación relajada
 import type { AWS } from '@serverless/typescript';
 
 const config: AWS = {
   service: 'sls-v3-node22-ts',
   frameworkVersion: '3',
+  // Evita error de validación del schema por runtime nuevo
+  configValidationMode: 'warn', // usa 'off' si no quieres ni warning
   plugins: [
     'serverless-esbuild',
     'serverless-offline',
