@@ -1,0 +1,27 @@
+{
+  "name": "serverless_3_create_template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "npx serverless@3 offline",
+    "deploy": "npx serverless@3 deploy",
+    "remove": "npx serverless@3 remove",
+    "invoke:local:hello": "npx serverless@3 invoke local -f hello --data '{\"name\":\"Dev\"}'",
+    "invoke:local:scheduled": "npx serverless@3 invoke local -f scheduledExample --stage dev"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^3",
+    "@types/aws-lambda": "^8",
+    "@types/node": "^22",
+    "serverless": "^3",
+    "serverless-esbuild": "^1",
+    "serverless-offline": "^13",
+    "serverless-offline-scheduler": "^0.5.0",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@middy/core": "^5"
+  }
+}
